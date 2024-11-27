@@ -1,0 +1,35 @@
+<div
+  class="container"
+  [ngClass]="{
+    'win-background': correctAnswers >= 3,
+    'lose-background': correctAnswers < 3
+  }"
+>
+  <div class="result-container">
+    <h2>{{ correctAnswers >= 3 ? "You Won!" : "Game Over!" }}</h2>
+
+    <p>{{ resultMessage }}</p>
+    <p>You got {{correctAnswers}}/{{totalRounds}} questions correct</p>
+    <div class="input-container" *ngIf="correctAnswers >= 3">
+      <label for="playerName">Enter your name:</label>
+      <input
+        id="playerName"
+        [(ngModel)]="playerName"
+        placeholder="Enter your name"
+      />
+    </div>
+
+    <div class="button">
+      <app-button
+        *ngIf="correctAnswers >= 3"
+        [color]="'#4CAF50'"
+        [route]="'/leaderboard'"
+        [disabled]="!playerName"
+        [onClickAction]="submitScore"
+        >Submit Score</app-button
+      >
+
+      <app-button [color]="'#4a90e2'" [route]="'/'">Home</app-button>
+    </div>
+  </div>
+</div>

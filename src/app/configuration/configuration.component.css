@@ -1,0 +1,35 @@
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #293d41;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; 
+  text-align: center;
+}
+
+.difficulty-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.difficulty-selection label {
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.difficulty-selection input[type="radio"] {
+  accent-color: #4a90e2;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}

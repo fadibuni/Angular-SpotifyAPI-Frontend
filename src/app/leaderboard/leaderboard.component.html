@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="leaderboard-container">
+    <h2>Leaderboard</h2>
+
+    <div *ngIf="leaderboard.length > 0">
+      <ul>
+        <li *ngFor="let entry of leaderboard; let i = index">
+          {{ i + 1 }}. {{ entry.username }} - {{ entry.score }} points
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="leaderboard.length === 0">
+      <p>No leaderboard entries yet.</p>
+    </div>
+
+    <app-button [color]="'#4a90e2'" [route]="'/'">Home</app-button>
+  </div>
+</div>

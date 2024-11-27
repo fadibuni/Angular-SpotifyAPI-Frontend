@@ -1,0 +1,20 @@
+<div class="configuration container">
+<div class="difficulty-selection">
+  <label>
+    <input type="radio" name="difficulty" [value]="difficulty.Easy" (change)="changeDifficulty(difficulty.Easy)" 
+           [checked]="selectedDifficulty === difficulty.Easy" /> Easy
+  </label>
+  <label>
+    <input type="radio" name="difficulty" [value]="difficulty.Medium" (change)="changeDifficulty(difficulty.Medium)" 
+           [checked]="selectedDifficulty === difficulty.Medium" /> Medium
+  </label>
+  <label>
+    <input type="radio" name="difficulty" [value]="difficulty.Hard" (change)="changeDifficulty(difficulty.Hard)" 
+           [checked]="selectedDifficulty === difficulty.Hard" /> Hard
+  </label>
+</div>
+
+<app-button [color]="'#4a90e2'" [route]="'/'">Home</app-button>
+<app-button [color]="'#4CAF50'" [route]="'/leaderboard'">Leaderboard</app-button>
+
+</div>

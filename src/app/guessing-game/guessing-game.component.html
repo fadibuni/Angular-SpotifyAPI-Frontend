@@ -1,0 +1,26 @@
+<div class="container">
+  <app-button [color]="'#4a90e2'" [route]="'/'" [onClickAction]="resetGameOnHomeClick">Go Back to Home</app-button>
+  <div class="controls-container">
+    <h1>Who is the Artist?</h1>
+    <app-button [color]="'#4a90e2'" [onClickAction]="playPauseTrack">Play/Pause</app-button>
+    <form class="tracks-form">
+      <div
+        *ngFor="let track of tracksArray; let i = index"
+        class="track-option"
+        (click)="selectedTrack = track"
+      >
+        <label>
+          <input
+            type="radio"
+            name="track"
+            [value]="track"
+            [(ngModel)]="selectedTrack"
+            [attr.id]="'track-' + i"
+          />
+          {{ track.artists[0].name }}
+        </label>
+      </div>
+    </form>
+    <app-button [color]="'#4a90e2'" [onClickAction]="submitQuestion" [disabled]="selectedTrack === null">Submit Answer</app-button>
+  </div>
+</div>

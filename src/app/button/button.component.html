@@ -1,0 +1,12 @@
+<button
+(click)="!disabled && handleClick()"
+[ngStyle]="{
+  'background-color': disabled ? disabledColor : color,
+  'cursor': disabled ? 'not-allowed' : 'pointer',
+  'opacity': disabled ? '0.5' : '1'
+}"
+class="custom-button"
+[attr.disabled]="disabled ? true : null"
+>
+<ng-content></ng-content>
+</button>

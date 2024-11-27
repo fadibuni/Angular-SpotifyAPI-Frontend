@@ -1,0 +1,29 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #292655;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 36px; 
+    margin-bottom: 40px;  
+    font-weight: bold;
+    text-align: center;       
+    width: 100%;
+    display: block;
+    color:aliceblue;
+  }
+  
+ 
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
